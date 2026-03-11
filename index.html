@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星辉远征录 - 长篇在线文字冒险</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <h1>✨ 星辉远征录：远征者版本</h1>
+        <p>长线奇幻文字探索 · 多章节主线 · 可循环支线与成长系统</p>
+      </header>
+
+      <section class="status-panel" aria-label="角色状态">
+        <div><strong>生命</strong><span id="hp">12/12</span></div>
+        <div><strong>魔力</strong><span id="mana">5/5</span></div>
+        <div><strong>等级</strong><span id="level">1</span></div>
+        <div><strong>经验</strong><span id="xp">0/20</span></div>
+        <div><strong>金币</strong><span id="gold">0</span></div>
+        <div><strong>天数</strong><span id="day">1</span></div>
+        <div><strong>地点</strong><span id="location">晨雾村</span></div>
+      </section>
+
+      <section class="scene-panel">
+        <img id="scene-image" src="assets/village.svg" alt="当前场景插图" />
+        <article>
+          <h2 id="scene-title">晨雾村</h2>
+          <p id="scene-text"></p>
+        </article>
+      </section>
+
+      <section class="choices-panel" id="choices" aria-label="可选行动"></section>
+
+      <section class="grid-panels">
+        <section class="inventory-panel">
+          <h3>🎒 背包</h3>
+          <ul id="inventory-list"></ul>
+        </section>
+
+        <section class="quest-panel">
+          <h3>🧭 任务</h3>
+          <ul id="quest-list"></ul>
+        </section>
+
+        <section class="log-panel">
+          <h3>📜 冒险日志</h3>
+          <ul id="log-list"></ul>
+        </section>
+      </section>
+
+      <footer class="game-footer">
+        <button id="save-btn" type="button">导出存档</button>
+        <button id="load-btn" type="button">导入存档</button>
+        <button id="restart-btn" type="button">重新开始</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

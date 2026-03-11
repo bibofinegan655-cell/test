@@ -1,0 +1,189 @@
+:root {
+  --bg: #0f1020;
+  --panel: #1a1d35;
+  --text: #f3f5ff;
+  --muted: #a6afd8;
+  --accent: #8d78ff;
+  --good: #80e7ac;
+  --warn: #ffcc88;
+  --bad: #ff8ea8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans SC", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #262b59, var(--bg) 50%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.game-shell {
+  width: min(980px, 96vw);
+  margin: 1rem auto;
+  padding: 1rem;
+  background: rgba(11, 13, 26, 0.86);
+  border: 1px solid #2f3567;
+  border-radius: 16px;
+  display: grid;
+  gap: 1rem;
+}
+
+.game-header h1,
+.game-header p {
+  margin: 0;
+}
+
+.game-header p {
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
+
+.status-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.status-panel div {
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 0.65rem;
+  border: 1px solid #313870;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scene-panel,
+.inventory-panel,
+.log-panel,
+.quest-panel {
+  background: var(--panel);
+  border: 1px solid #313870;
+  border-radius: 12px;
+}
+
+.scene-panel {
+  overflow: hidden;
+}
+
+.scene-panel img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-bottom: 1px solid #313870;
+}
+
+.scene-panel article {
+  padding: 1rem;
+}
+
+.scene-panel h2 {
+  margin-top: 0;
+}
+
+.choices-panel {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.choice-btn,
+#restart-btn,
+#save-btn,
+#load-btn {
+  border: 1px solid #4f5fbb;
+  background: linear-gradient(180deg, #2f3a79, #263064);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.97rem;
+}
+
+.choice-btn:hover,
+#restart-btn:hover,
+#save-btn:hover,
+#load-btn:hover {
+  filter: brightness(1.08);
+}
+
+.grid-panels {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.inventory-panel,
+.log-panel,
+.quest-panel {
+  padding: 0.75rem 1rem;
+}
+
+.log-panel {
+  grid-column: 1 / -1;
+}
+
+.inventory-panel h3,
+.log-panel h3,
+.quest-panel h3 {
+  margin: 0.15rem 0 0.5rem;
+}
+
+.inventory-panel ul,
+.log-panel ul,
+.quest-panel ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.log-panel ul li:first-child {
+  color: var(--good);
+}
+
+.quest-panel ul li.done {
+  color: var(--good);
+  text-decoration: line-through;
+}
+
+.quest-panel ul li.active {
+  color: #d8dcff;
+}
+
+.game-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.ending {
+  border: 1px solid var(--warn);
+  background: rgba(255, 196, 110, 0.12);
+  border-radius: 10px;
+  padding: 0.7rem;
+  color: #ffd8a1;
+}
+
+.warn {
+  color: var(--bad);
+}
+
+@media (max-width: 760px) {
+  .status-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .log-panel {
+    grid-column: auto;
+  }
+}

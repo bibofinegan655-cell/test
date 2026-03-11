@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#10251f"/>
+  <circle cx="180" cy="90" r="70" fill="#9ef5d1" opacity="0.8"/>
+  <g fill="#1e4a3b">
+    <rect x="140" y="160" width="40" height="320"/><circle cx="160" cy="140" r="90"/>
+    <rect x="380" y="130" width="44" height="350"/><circle cx="402" cy="120" r="110"/>
+    <rect x="690" y="170" width="42" height="320"/><circle cx="711" cy="160" r="100"/>
+    <rect x="980" y="120" width="40" height="360"/><circle cx="1000" cy="110" r="120"/>
+  </g>
+  <circle cx="530" cy="320" r="24" fill="#f3a8ff"/>
+  <circle cx="560" cy="350" r="16" fill="#ffd16a"/>
+  <text x="40" y="560" fill="#d8ffe9" font-size="48" font-family="sans-serif">银叶森林</text>
+</svg>

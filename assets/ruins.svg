@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#1b1d2d"/>
+  <rect y="450" width="1200" height="150" fill="#2d3247"/>
+  <rect x="220" y="220" width="80" height="230" fill="#626b87"/>
+  <rect x="430" y="180" width="90" height="270" fill="#6f7897"/>
+  <rect x="690" y="210" width="85" height="240" fill="#66708c"/>
+  <rect x="920" y="170" width="80" height="280" fill="#5f6783"/>
+  <ellipse cx="600" cy="380" rx="160" ry="60" fill="#0c0f1b"/>
+  <ellipse cx="600" cy="375" rx="120" ry="36" fill="#3f77ff" opacity="0.8"/>
+  <text x="40" y="560" fill="#d4deff" font-size="48" font-family="sans-serif">古代遗迹</text>
+</svg>

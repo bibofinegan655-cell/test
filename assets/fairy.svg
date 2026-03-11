@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs><radialGradient id="g" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#ffe8ff"/><stop offset="1" stop-color="#3a1d5b"/></radialGradient></defs>
+  <rect width="1200" height="600" fill="url(#g)"/>
+  <ellipse cx="600" cy="320" rx="120" ry="180" fill="#ffd9f9"/>
+  <circle cx="600" cy="180" r="70" fill="#ffeefb"/>
+  <ellipse cx="470" cy="280" rx="120" ry="70" fill="#c5b9ff" opacity="0.7"/>
+  <ellipse cx="730" cy="280" rx="120" ry="70" fill="#c5b9ff" opacity="0.7"/>
+  <circle cx="520" cy="130" r="12" fill="#fff49a"/>
+  <circle cx="690" cy="120" r="10" fill="#fff49a"/>
+  <text x="40" y="560" fill="#fff2ff" font-size="48" font-family="sans-serif">妖精契约</text>
+</svg>

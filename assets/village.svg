@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a74c9"/><stop offset="1" stop-color="#1a2448"/></linearGradient></defs>
+  <rect width="1200" height="600" fill="url(#g)"/>
+  <circle cx="980" cy="100" r="50" fill="#f6f1b8"/>
+  <rect y="430" width="1200" height="170" fill="#2a3c2f"/>
+  <rect x="180" y="300" width="180" height="140" fill="#7e4f34"/><polygon points="160,300 270,220 380,300" fill="#4f2f22"/>
+  <rect x="500" y="280" width="200" height="160" fill="#9a6342"/><polygon points="470,280 600,190 730,280" fill="#613726"/>
+  <rect x="860" y="320" width="160" height="120" fill="#74492f"/><polygon points="840,320 940,250 1040,320" fill="#4c2d20"/>
+  <text x="40" y="560" fill="#ffffff" font-size="48" font-family="sans-serif">晨雾村</text>
+</svg>

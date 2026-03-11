@@ -6,6 +6,7 @@
   --accent: #8d78ff;
   --good: #80e7ac;
   --warn: #ffcc88;
+  --bad: #ff8ea8;
 }
 
 * {
@@ -15,50 +16,57 @@
 body {
   margin: 0;
   font-family: "Noto Sans SC", "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #22264a, var(--bg) 50%);
+  background: radial-gradient(circle at top, #262b59, var(--bg) 50%);
   color: var(--text);
   min-height: 100vh;
 }
 
 .game-shell {
-  width: min(900px, 96vw);
+  width: min(980px, 96vw);
   margin: 1rem auto;
   padding: 1rem;
-  background: rgba(11, 13, 26, 0.85);
+  background: rgba(11, 13, 26, 0.86);
   border: 1px solid #2f3567;
   border-radius: 16px;
   display: grid;
   gap: 1rem;
 }
 
-.game-header h1 {
+.game-header h1,
+.game-header p {
   margin: 0;
 }
 
 .game-header p {
-  margin: 0.25rem 0 0;
+  margin-top: 0.25rem;
   color: var(--muted);
 }
 
 .status-panel {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
+  gap: 0.7rem;
 }
 
 .status-panel div {
   background: var(--panel);
   border-radius: 10px;
-  padding: 0.75rem;
+  padding: 0.65rem;
   border: 1px solid #313870;
   display: flex;
   justify-content: space-between;
 }
 
-.scene-panel {
+.scene-panel,
+.inventory-panel,
+.log-panel,
+.quest-panel {
   background: var(--panel);
   border: 1px solid #313870;
   border-radius: 12px;
+}
+
+.scene-panel {
   overflow: hidden;
 }
 
@@ -79,11 +87,13 @@ body {
 
 .choices-panel {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .choice-btn,
-#restart-btn {
+#restart-btn,
+#save-btn,
+#load-btn {
   border: 1px solid #4f5fbb;
   background: linear-gradient(180deg, #2f3a79, #263064);
   color: #fff;
@@ -91,41 +101,65 @@ body {
   padding: 0.7rem 1rem;
   text-align: left;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.97rem;
 }
 
 .choice-btn:hover,
-#restart-btn:hover {
+#restart-btn:hover,
+#save-btn:hover,
+#load-btn:hover {
   filter: brightness(1.08);
 }
 
+.grid-panels {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 1fr;
+}
+
 .inventory-panel,
-.log-panel {
-  background: var(--panel);
-  border: 1px solid #313870;
-  border-radius: 12px;
+.log-panel,
+.quest-panel {
   padding: 0.75rem 1rem;
 }
 
+.log-panel {
+  grid-column: 1 / -1;
+}
+
 .inventory-panel h3,
-.log-panel h3 {
+.log-panel h3,
+.quest-panel h3 {
   margin: 0.15rem 0 0.5rem;
 }
 
 .inventory-panel ul,
-.log-panel ul {
+.log-panel ul,
+.quest-panel ul {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
   color: var(--muted);
+  line-height: 1.4;
 }
 
 .log-panel ul li:first-child {
   color: var(--good);
 }
 
+.quest-panel ul li.done {
+  color: var(--good);
+  text-decoration: line-through;
+}
+
+.quest-panel ul li.active {
+  color: #d8dcff;
+}
+
 .game-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .ending {
@@ -136,8 +170,20 @@ body {
   color: #ffd8a1;
 }
 
-@media (max-width: 700px) {
+.warn {
+  color: var(--bad);
+}
+
+@media (max-width: 760px) {
   .status-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .log-panel {
+    grid-column: auto;
   }
 }
